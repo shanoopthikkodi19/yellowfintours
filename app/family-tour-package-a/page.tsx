@@ -4,92 +4,80 @@ import { SiteHeader, SiteFooter } from "../components/SiteChrome";
 import { BRAND, tel } from "../site-data";
 
 export const metadata: Metadata = {
-  title: "Family Tour Package A: Andaman 5 Nights 6 Days | Yellow Fin Tours & Travels",
+  title: "Andaman Family Tour Package: 5 Nights 6 Days | Yellow Fin Tours & Travels",
   description:
-    "Six-day Andaman family tour covering Port Blair and Swaraj Dweep (Havelock), with AC stay, breakfast, ferry tickets and Cellular Jail entry.",
+    "Five-night Andaman family tour covering Port Blair, Swaraj Dweep (Havelock) and Shaheed Dweep (Neil), with AC rooms, breakfast, airport and sightseeing transfers and inter-island ferries.",
 };
 
 /* ---------- EDIT CONTENT HERE ---------- */
 const TRIP = {
-  title: "Family Tour Package A",
+  title: "Andaman Family Tour Package",
   length: "5 nights, 6 days",
-  route: "Port Blair, Swaraj Dweep (Havelock)",
+  route: "Port Blair, Swaraj Dweep (Havelock), Shaheed Dweep (Neil)",
 };
 
 type Day = { day: number; title: string; stops: string[]; note?: string };
 
-// Sample itinerary: replace with your real Family Package A plan.
 const DAYS: Day[] = [
   {
     day: 1,
     title: "Arrive in Port Blair",
     stops: [
-      "Airport pick-up",
-      "Check in at the hotel and rest",
+      "Arrive at the airport and transfer to your hotel",
       "Visit Cellular Jail, Marine Aquarium, Flag Point and Marina Park",
-      "Cellular Jail light and sound show",
-      "Dinner and back to the room",
+      "Evening Cellular Jail Light and Sound Show",
     ],
   },
   {
     day: 2,
-    title: "Swaraj Dweep (Havelock)",
+    title: "Island adventures at Swaraj Dweep",
     stops: [
-      "Morning ferry to Swaraj Dweep",
-      "Breakfast on arrival, then check in at the hotel or resort",
-      "Speed boat to Elephanta Beach (water activities available there)",
-      "Return and have lunch",
-      "Radhanagar Beach for swimming and sunset",
-      "Back to the room",
+      "Early morning ferry to Havelock Island",
+      "Excursion to Elephanta Beach, where water activities may be available",
+      "Radhanagar Beach to relax and enjoy the natural beauty of the island",
     ],
   },
   {
     day: 3,
-    title: "Havelock at leisure",
+    title: "Explore Shaheed Dweep",
     stops: [
       "Sunrise at Kalapathar Beach",
-      "Breakfast",
-      "Free time at the resort or optional activities",
-      "Evening stroll at the beach",
-      "Dinner and back to the room",
+      "Travel to Neil Island",
+      "Natural rock formations at Laxmanpur Beach 2",
+      "Bharatpur Beach",
+      "Evening at Laxmanpur Beach 1",
     ],
-    note: "A relaxed day so children and grandparents can rest. Activities can be added on request.",
   },
   {
     day: 4,
-    title: "Havelock to Port Blair",
+    title: "Port Blair sightseeing and shopping",
     stops: [
-      "Breakfast and check out",
-      "Ferry to Sri Vijayapuram (Port Blair) and drop at the hotel",
-      "Lunch and a short rest",
+      "Sunrise at Sitapur Beach",
+      "Return to Port Blair",
       "Samudrika Naval Marine Museum",
-      "Shopping at Aberdeen Bazaar",
-      "Dinner and back to the room",
+      "Local shopping at Aberdeen Bazaar",
     ],
   },
   {
     day: 5,
-    title: "Chatham, Ross Island and North Bay",
+    title: "Discover Ross Island and North Bay",
     stops: [
-      "Breakfast",
-      "Chatham Saw Mill, said to be Asia's oldest",
-      "Ross Island and the North Bay Island lighthouse",
-      "Back to the jetty in the evening",
-      "Corbyn's Cove Beach",
-      "Dinner and back to the room",
+      "Chatham Saw Mill",
+      "Ross Island and North Bay Island",
+      "Corbyn's Cove Beach, then back to your hotel",
     ],
   },
   {
     day: 6,
     title: "Departure",
-    stops: ["Breakfast", "Check out", "Return to the mainland with beautiful memories"],
+    stops: ["Breakfast and check out", "Transfer for your departure, taking home wonderful family memories"],
   },
 ];
 
 const INCLUDED = [
-  "AC room, breakfast and travelling facilities",
-  "Ferry tickets for Swaraj Dweep, Elephanta Beach, Ross Island and North Bay",
-  "All entry tickets and the light and sound show at Cellular Jail",
+  "AC rooms with breakfast",
+  "Airport and sightseeing transfers as per itinerary",
+  "Inter-island ferry arrangements as per itinerary",
 ];
 
 const ON_REQUEST = [
@@ -104,7 +92,7 @@ const BEACH = ["Towel and extra clothes", "Sunscreen", "Waterproof phone pouch",
 
 export default function FamilyTourPackageAPage() {
   const wa = `https://wa.me/${BRAND.whatsapp}?text=${encodeURIComponent(
-    "Hi Yellow Fin Tours, I'd like details and a quote for Family Tour Package A (Andaman 5 nights 6 days).",
+    "Hi Yellow Fin Tours, I'd like details and a quote for the Andaman Family Tour Package (5 nights 6 days).",
   )}`;
 
   return (
@@ -116,11 +104,11 @@ export default function FamilyTourPackageAPage() {
         <section className="yf-trip-hero">
           <div className="yf-trip-hero-inner">
             <div>
-              <p className="yf-crumbs"><a href="/">Home</a> / Family Tour Package A</p>
+              <p className="yf-crumbs"><a href="/">Home</a> / Andaman Family Tour Package</p>
               <h1 className="yf-display">{TRIP.title}: {TRIP.length}</h1>
               <p className="yf-trip-lead">
-                The Yellow Fin team welcomes your family to a comfortable and memorable island holiday, with an easy
-                pace and short transfers.
+                Create wonderful family memories with Yellow Fin Tours. Explore beautiful beaches, discover island
+                attractions and enjoy a relaxing holiday with your loved ones.
               </p>
               <div className="yf-hero-actions">
                 <a className="yf-btn-primary" href={wa} target="_blank" rel="noopener noreferrer">Get a quote on WhatsApp</a>
@@ -129,7 +117,7 @@ export default function FamilyTourPackageAPage() {
             </div>
             <ul className="yf-facts">
               <li><strong>6 days</strong><span>5 nights</span></li>
-              <li><strong>2 stops</strong><span>Port Blair, Havelock</span></li>
+              <li><strong>3 stops</strong><span>Port Blair, Havelock, Neil</span></li>
               <li><strong>AC stay</strong><span>Breakfast included</span></li>
             </ul>
           </div>
@@ -164,6 +152,7 @@ export default function FamilyTourPackageAPage() {
                 <div><dt>Duration</dt><dd>{TRIP.length}</dd></div>
                 <div><dt>Route</dt><dd>{TRIP.route}</dd></div>
                 <div><dt>Stay</dt><dd>AC rooms with breakfast</dd></div>
+                <div><dt>Ideal for</dt><dd>Families, parents with children, multigenerational holidays</dd></div>
                 <div><dt>Price</dt><dd>On request, based on family size and dates</dd></div>
               </dl>
               <a className="yf-btn-primary" href={wa} target="_blank" rel="noopener noreferrer">Enquire on WhatsApp</a>
