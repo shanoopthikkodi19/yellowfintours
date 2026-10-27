@@ -7,45 +7,23 @@ import { BRAND } from "./site-data";
 
 
 /* ---------- EDIT THESE ---------- */
-const FILTERS = ["All", "Honeymoon", "Family", "Group", "Custom", "Holiday", "Office", "Student", "Onam", "Vishu", "New Year"];
+const FILTERS = ["All", "Family", "Honeymoon"];
 
 type Pkg = { cat: string; title: string; href: string; length: string; route: string; blurb: string; tone: number };
 
 // Sample content: replace durations, routes and wording with your real itineraries.
 const PACKAGES: Pkg[] = [
-  { cat: "Honeymoon", title: "Honeymoon Package", href: "/honeymoon-package", length: "5 nights, 6 days", route: "Port Blair, Havelock, Neil", blurb: "Private beach time at Radhanagar, candlelight dinners and unhurried days for two.", tone: 0 },
-  { cat: "Family", title: "Family Packages", href: "/family-packages", length: "6 nights, 7 days", route: "Port Blair, Havelock, Neil", blurb: "Easy pacing, short transfers and stays that suit children and grandparents alike.", tone: 1 },
-  { cat: "Group", title: "Group Packages", href: "/group-packages", length: "5 to 7 days", route: "Fixed departures", blurb: "Join a scheduled group with a tour manager, or book a private group of friends.", tone: 2 },
-  { cat: "Custom", title: "Custom Packages", href: "/custom-packages", length: "You decide", route: "Any island, any pace", blurb: "Tell us the dates, budget and interests. We build the itinerary around you.", tone: 3 },
-  { cat: "Holiday", title: "Holiday Packages", href: "/holiday-packages", length: "4 to 8 days", route: "Port Blair, Havelock, Neil", blurb: "Ready-made island holidays with hotels, ferries and sightseeing already sorted.", tone: 4 },
-  { cat: "Office", title: "Office Tour", href: "/office-tour", length: "4 to 6 days", route: "Port Blair, Havelock", blurb: "Team outings with meeting-friendly venues, group activities and one invoice.", tone: 5 },
-  { cat: "Student", title: "Student Tour", href: "/speciality-tours/student", length: "4 to 6 days", route: "Port Blair, Ross, Baratang", blurb: "Educational trips covering history, mangroves and marine life, with teacher-friendly pricing.", tone: 1 },
-  { cat: "Onam", title: "Onam Tour", href: "/speciality-tours/onam", length: "5 days", route: "Port Blair, Havelock", blurb: "Spend the Onam holidays on the islands with a sadya-style festive lunch.", tone: 2 },
-  { cat: "Vishu", title: "Vishu Tour", href: "/speciality-tours/vishu", length: "5 days", route: "Port Blair, Havelock", blurb: "Mark Vishu by the sea with a family-friendly programme and festive meals.", tone: 0 },
-  { cat: "New Year", title: "New Year Tour", href: "/speciality-tours/new-year", length: "5 to 6 days", route: "Havelock, Neil", blurb: "Welcome the year on a quiet beach. Book early, hotels fill up fast.", tone: 3 },
-];
-
-const PLACES = [
-  { name: "Port Blair", note: "Cellular Jail, museums and the arrival point for most trips." },
-  { name: "Havelock (Swaraj Dweep)", note: "Radhanagar Beach, scuba diving and snorkelling." },
-  { name: "Neil (Shaheed Dweep)", note: "Bharatpur Beach, Natural Bridge and slow island cycling." },
-  { name: "Ross and North Bay", note: "Colonial ruins and coral-lined shores, a short boat ride away." },
-  { name: "Baratang", note: "Limestone caves and a mangrove creek by boat." },
-  { name: "Diglipur", note: "Saddle Peak, turtle beaches and a quieter north." },
-];
-
-// Sample reviews: swap for real customer feedback before going live.
-const REVIEWS = [
-  { name: "Guest name", trip: "Honeymoon Package", text: "Replace this with a real review from a honeymoon guest." },
-  { name: "Guest name", trip: "Family Packages", text: "Replace this with a real review from a family traveller." },
-  { name: "Guest name", trip: "Onam Tour", text: "Replace this with a real review from a festival group." },
+  { cat: "Family", title: "Family Tour Package A", href: "/family-tour-package-a", length: "5 nights, 6 days", route: "Port Blair, Havelock", blurb: "Easy pacing, short transfers and stays that suit children and grandparents alike.", tone: 1 },
+  { cat: "Honeymoon", title: "Honeymoon Package A", href: "/honeymoon-package-a", length: "5 nights, 6 days", route: "Port Blair, Havelock", blurb: "Private beach time at Radhanagar, candlelight dinners and unhurried days for two.", tone: 0 },
+  { cat: "Family", title: "Family Tour Package B", href: "/family-tour-package-b", length: "6 nights, 7 days", route: "Port Blair, Havelock, Neil", blurb: "A longer family holiday adding Neil Island, with relaxed sightseeing and beach days.", tone: 2 },
+  { cat: "Honeymoon", title: "Honeymoon Package B", href: "/honeymoon-package-b", length: "6 nights, 7 days", route: "Port Blair, Havelock, Neil", blurb: "Three islands at a gentle pace, with sunset spots, water activities and quiet evenings.", tone: 3 },
 ];
 /* -------------------------------- */
 
 export default function Home() {
   const [filter, setFilter] = useState("All");
   const [query, setQuery] = useState("");
-  const [form, setForm] = useState({ name: "", phone: "", month: "", interest: "Honeymoon Package" });
+  const [form, setForm] = useState({ name: "", phone: "", month: "", interest: "Honeymoon Package A" });
 
   const shown = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -68,7 +46,7 @@ export default function Home() {
             <h1 className="yf-display">Island holidays, planned on the islands.</h1>
             <p>
               Yellow Fin Tours and Travels arranges stays, ferries, sightseeing and activities across the
-              Andaman and Nicobar Islands, for couples, families, offices, schools and groups.
+              Andaman and Nicobar Islands.
             </p>
             <div className="yf-hero-actions">
               <a href="#packages" className="yf-btn-primary">See packages</a>
@@ -81,7 +59,7 @@ export default function Home() {
         <section id="packages" className="yf-section">
           <div className="yf-section-head">
             <h2 className="yf-display">Choose how you want to travel</h2>
-            <p>Pick a type of trip. Every package can be adjusted to your dates and budget.</p>
+            <p>Pick a package. Every package can be adjusted to your dates and budget.</p>
           </div>
 
           <div className="yf-chips" role="tablist" aria-label="Package type">
@@ -100,7 +78,7 @@ export default function Home() {
 
           {shown.length === 0 ? (
             <p className="yf-empty">
-              No package matches "{query}". Clear the search, or <a href="#enquire">ask us for a custom plan</a>.
+              No package matches "{query}". Clear the search, or <a href="#enquire">talk to us</a>.
             </p>
           ) : (
             <ul className="yf-grid">
@@ -120,38 +98,6 @@ export default function Home() {
               ))}
             </ul>
           )}
-        </section>
-
-        {/* ---------- Places ---------- */}
-        <section className={`yf-section yf-places`}>
-          <div className="yf-section-head">
-            <h2 className="yf-display">Where we take you</h2>
-          </div>
-          <ul className="yf-place-list">
-            {PLACES.map((p) => (
-              <li key={p.name}>
-                <h3 className="yf-display">{p.name}</h3>
-                <p>{p.note}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* ---------- Reviews ---------- */}
-        <section className="yf-section">
-          <div className="yf-section-head">
-            <h2 className="yf-display">What our travellers say</h2>
-            <p>Customer satisfaction is our main goal.</p>
-          </div>
-          <ul className="yf-reviews">
-            {REVIEWS.map((r, i) => (
-              <li key={i}>
-                <p className="yf-stars" aria-label="5 out of 5">★★★★★ <span>5.0</span></p>
-                <p>{r.text}</p>
-                <p className="yf-who"><strong>{r.name}</strong>, {r.trip}</p>
-              </li>
-            ))}
-          </ul>
         </section>
 
         {/* ---------- Enquiry ---------- */}
@@ -174,7 +120,7 @@ export default function Home() {
               <input value={form.month} onChange={(e) => setForm({ ...form, month: e.target.value })} placeholder="e.g. December" />
             </label>
             <label>
-              Trip type
+              Package
               <select value={form.interest} onChange={(e) => setForm({ ...form, interest: e.target.value })}>
                 {PACKAGES.map((p) => (
                   <option key={p.title}>{p.title}</option>
