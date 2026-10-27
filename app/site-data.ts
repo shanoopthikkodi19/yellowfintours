@@ -13,8 +13,13 @@ export type NavItem = { label: string; href: string; children?: { label: string;
 
 export const NAV: NavItem[] = [
   { label: "Group Packages", href: "/group-packages" },
-  { label: "Family Tour Package A", href: "/family-tour-package-a" },
-  { label: "Honeymoon Package A", href: "/honeymoon-package-a" },
+  { label: "Family Tour Package", href: "/family-tour-package-a",children: [
+      { label: "Student Tour", href: "/speciality-tours/student" },
+      { label: "Onam Tour", href: "/speciality-tours/onam" },
+      { label: "Vishu Tour", href: "/speciality-tours/vishu" },
+      { label: "New Year Tour", href: "/speciality-tours/new-year" },
+    ], },
+  { label: "Honeymoon Package", href: "/honeymoon-package-a" },
   { label: "Holiday Packages", href: "/holiday-packages" },
   { label: "Office Tour", href: "/office-tour" },
   {
