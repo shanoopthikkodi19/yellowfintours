@@ -13,9 +13,15 @@ export type NavItem = { label: string; href: string; children?: { label: string;
 
 export const NAV: NavItem[] = [
   { label: "Group Packages", href: "/group-packages" },
-  { label: "Family Tour Package", href: "/andaman-family-tour-package5-6"},
+  {
+    label: "Family Tour Package",
+    href: "/andaman-family-tour-package5-6",
+    children: [
+      { label: "5 Nights / 6 Days", href: "/andaman-family-tour-package5-6" },
+      { label: "3 Nights / 4 Days", href: "/andaman-family-tour-package3-4" },
+    ],
+  },
   { label: "Honeymoon Package", href: "/honeymoon-package-a" },
-  { label: "Family", href: "/andaman-family-tour-package3-4" },
   { label: "Office Tour", href: "/office-tour" },
   {
     label: "Speciality Tours",

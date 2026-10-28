@@ -13,9 +13,9 @@ type Pkg = { cat: string; title: string; href: string; length: string; route: st
 
 // Sample content: replace durations, routes and wording with your real itineraries.
 const PACKAGES: Pkg[] = [
-  { cat: "Family", title: "Family Tour Package A", href: "/family-tour-package-a", length: "5 nights, 6 days", route: "Port Blair, Havelock", blurb: "Easy pacing, short transfers and stays that suit children and grandparents alike.", tone: 1 },
+  { cat: "Family", title: "Family Tour Package A", href: "/andaman-family-tour-package5-6", length: "5 nights, 6 days", route: "Port Blair, Havelock", blurb: "Easy pacing, short transfers and stays that suit children and grandparents alike.", tone: 1 },
   { cat: "Honeymoon", title: "Honeymoon Package A", href: "/honeymoon-package-a", length: "5 nights, 6 days", route: "Port Blair, Havelock", blurb: "Private beach time at Radhanagar, candlelight dinners and unhurried days for two.", tone: 0 },
-  { cat: "Family", title: "Family Tour Package B", href: "/family-tour-package-b", length: "6 nights, 7 days", route: "Port Blair, Havelock, Neil", blurb: "A longer family holiday adding Neil Island, with relaxed sightseeing and beach days.", tone: 2 },
+  { cat: "Family", title: "Family Tour Package B", href: "/andaman-family-tour-package3-4", length: "3 nights, 4 days", route: "Port Blair, Havelock, Neil, Baratang", blurb: "A short family holiday with Ross Island, Havelock and Neil beaches, Limestone Cave and Mud Volcano.", tone: 2 },
   { cat: "Honeymoon", title: "Honeymoon Package B", href: "/honeymoon-package-b", length: "6 nights, 7 days", route: "Port Blair, Havelock, Neil", blurb: "Three islands at a gentle pace, with sunset spots, water activities and quiet evenings.", tone: 3 },
 ];
 /* -------------------------------- */

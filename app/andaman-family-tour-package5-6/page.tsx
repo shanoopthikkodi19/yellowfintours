@@ -97,7 +97,7 @@ export default function FamilyTourPackageAPage() {
 
   return (
     <div className={`yf-page ${body.className}`} style={{ ["--display" as string]: display.style.fontFamily }}>
-      <SiteHeader current="/family-tour-package-a" />
+      <SiteHeader current="/andaman-family-tour-package5-6" />
 
       <main>
         {/* ---------- Title block ---------- */}
