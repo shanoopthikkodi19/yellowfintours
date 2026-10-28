@@ -65,7 +65,7 @@ export function SiteHeader({ current, query = "", onQuery }: HeaderProps) {
                   </button>
                   {openMenu === item.label && (
                     <ul className="yf-dropdown">
-                      <li><a href={item.href}>All speciality tours</a></li>
+                      <li><a href={item.href}>All {item.label.toLowerCase()}</a></li>
                       {item.children.map((c) => (
                         <li key={c.label}><a href={c.href}>{c.label}</a></li>
                       ))}
