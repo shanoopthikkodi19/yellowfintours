@@ -12,9 +12,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "Yellow Fin",
-  description: "Tours & Travels",
+export const metadata: Metadata = {
+  title: {
+    default: "Yellow Fin Tours & Travels | Andaman Tour Packages",
+    template: "%s | Yellow Fin Tours & Travels",
+  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
