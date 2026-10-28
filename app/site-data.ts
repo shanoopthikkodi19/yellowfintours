@@ -1,6 +1,6 @@
 /* Shared by every page. Edit contact details and menu here once. */
 export const BRAND = {
-  name: "Yellow Fin",
+  name: "Yellow Fin Tours",
   suffix: "Tours & Travels",
   phone: "+91 96795 73417",
   phone2: "+91 80895 08728",
@@ -13,14 +13,9 @@ export type NavItem = { label: string; href: string; children?: { label: string;
 
 export const NAV: NavItem[] = [
   { label: "Group Packages", href: "/group-packages" },
-  { label: "Family Tour Package", href: "/family-tour-package-a",children: [
-      { label: "Student Tour", href: "/speciality-tours/student" },
-      { label: "Onam Tour", href: "/speciality-tours/onam" },
-      { label: "Vishu Tour", href: "/speciality-tours/vishu" },
-      { label: "New Year Tour", href: "/speciality-tours/new-year" },
-    ], },
+  { label: "Family Tour Package", href: "/andaman-family-tour-package5-6"},
   { label: "Honeymoon Package", href: "/honeymoon-package-a" },
-  { label: "Holiday Packages", href: "/holiday-packages" },
+  { label: "Family", href: "/andaman-family-tour-package3-4" },
   { label: "Office Tour", href: "/office-tour" },
   {
     label: "Speciality Tours",
